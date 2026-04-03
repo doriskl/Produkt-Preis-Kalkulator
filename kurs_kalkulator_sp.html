@@ -1,0 +1,236 @@
+<div id="kkRoot">
+<style>
+#kkRoot{font-family:'Segoe UI',Arial,sans-serif;color:#1a202c;font-size:14px;background:#f0f4f8;padding:16px;border-radius:12px}
+#kkRoot *{box-sizing:border-box;margin:0;padding:0}
+#kkRoot h2{font-size:18px;font-weight:700;color:#2b6cb0;margin-bottom:4px}
+#kkRoot .kksub{font-size:12px;color:#718096;margin-bottom:16px}
+#kkRoot .kkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+#kkRoot .kkcard{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px}
+#kkRoot .kkcard h3{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#2b6cb0;margin-bottom:12px;padding-bottom:7px;border-bottom:2px solid #ebf4ff}
+#kkRoot .kff{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;gap:8px}
+#kkRoot .kff label{font-size:13px;flex:1}
+#kkRoot .kff .ktag{font-size:10px;color:#718096;background:#f0f4f8;border-radius:4px;padding:1px 4px;margin-left:3px}
+#kkRoot .kff input[type=number],#kkRoot .kff input[type=text].knarrow{width:130px;padding:7px 10px;border:1px solid #e2e8f0;border-radius:8px;font-size:13px;text-align:right}
+#kkRoot .kff input[type=text].kwide{flex:1;padding:7px 10px;border:1px solid #e2e8f0;border-radius:8px;font-size:13px}
+#kkRoot .kff input:focus{outline:none;border-color:#2b6cb0;box-shadow:0 0 0 3px #ebf4ff}
+#kkRoot .kksum{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:18px}
+#kkRoot .kkmet{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px}
+#kkRoot .kkmet.hi{border:2px solid #2b6cb0;background:#ebf4ff}
+#kkRoot .kkmet .ml{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:#718096;margin-bottom:5px}
+#kkRoot .kkmet .mv{font-size:19px;font-weight:700;color:#1a202c}
+#kkRoot .kkmet.hi .mv{color:#2b6cb0}
+#kkRoot .kkmet .mn{font-size:10px;color:#718096;margin-top:3px}
+#kkRoot .kktbl{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+#kkRoot .kkth{padding:14px 16px;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#kkRoot .kkth h4{font-size:15px;font-weight:600}
+#kkRoot .kkleg{display:flex;gap:12px;flex-wrap:wrap}
+#kkRoot .kkleg span{display:flex;align-items:center;gap:4px;font-size:11px;color:#718096}
+#kkRoot .kkleg i{width:9px;height:9px;border-radius:2px;display:inline-block}
+#kkRoot .kktw{overflow-x:auto}
+#kkRoot table{width:100%;border-collapse:collapse;min-width:800px}
+#kkRoot th{padding:9px 11px;background:#f7fafc;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#718096;border-bottom:2px solid #e2e8f0;text-align:right;white-space:nowrap}
+#kkRoot th:first-child,#kkRoot th:nth-child(2){text-align:left}
+#kkRoot td{padding:9px 11px;border-bottom:1px solid #e2e8f0;text-align:right;white-space:nowrap;font-size:12px}
+#kkRoot td:first-child,#kkRoot td:nth-child(2){text-align:left}
+#kkRoot .thg{text-align:center!important;background:#edf2f7!important}
+#kkRoot .tds{border-left:2px solid #e2e8f0}
+#kkRoot .rg td{background:#f0fff4}
+#kkRoot .rw td{background:#fffff0}
+#kkRoot .rb td{background:#fff5f5}
+#kkRoot .rbe td{background:#fffaf0!important;border-top:2px solid #fbd38d!important;border-bottom:2px solid #fbd38d!important}
+#kkRoot .rbe td:first-child{border-left:3px solid #ed8936}
+#kkRoot .pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:10px;font-weight:700}
+#kkRoot .pg{background:#c6f6d5;color:#276749}
+#kkRoot .pw{background:#fefcbf;color:#744210}
+#kkRoot .pb{background:#fed7d7;color:#9b2c2c}
+#kkRoot .pbe{background:#fbd38d;color:#7b341e}
+#kkRoot .neg{color:#c53030}
+#kkRoot .pos{color:#276749}
+#kkRoot .kkdiv{margin-top:12px;padding-top:10px;border-top:1px dashed #e2e8f0}
+#kkRoot .kkdiv .kkdlabel{font-size:11px;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+#kkRoot .kksr{display:flex;gap:7px;align-items:center;margin-bottom:7px}
+#kkRoot .kksr input[type=text]{flex:1;padding:6px 9px;border:1px solid #e2e8f0;border-radius:7px;font-size:12px}
+#kkRoot .kksr input[type=number]{width:100px;padding:6px 9px;border:1px solid #e2e8f0;border-radius:7px;font-size:12px;text-align:right}
+#kkRoot .kksr .kktag2{font-size:10px;color:#718096;white-space:nowrap}
+#kkRoot .bndel{background:none;border:none;color:#e53e3e;font-size:17px;cursor:pointer;padding:0 3px}
+#kkRoot .bnadd{margin-top:5px;background:#ebf4ff;color:#2b6cb0;border:1px solid #2b6cb0;border-radius:7px;padding:5px 12px;font-size:11px;font-weight:600;cursor:pointer}
+#kkRoot .kkfoot{margin-top:12px;font-size:11px;color:#718096;line-height:1.7}
+@media(max-width:800px){#kkRoot .kkgrid{grid-template-columns:1fr}#kkRoot .kksum{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+<h2>📊 Kurs-Preiskalkulator</h2>
+<div class="kksub">Deckungsbeitrag &amp; Break-even je Teilnehmerzahl und Rabattstufe</div>
+
+<div class="kkgrid">
+  <div class="kkcard">
+    <h3>Kurs</h3>
+    <div class="kff"><label>Kursname</label><input id="kk_name" type="text" class="kwide" value="Beispielkurs"/></div>
+    <div class="kff"><label>Dauer <span class="ktag">Tage</span></label><input id="kk_dur" type="number" min="1" step="1" value="4"/></div>
+    <div class="kff"><label>Min. TN</label><input id="kk_min" type="number" min="1" step="1" value="3"/></div>
+    <div class="kff"><label>Max. TN</label><input id="kk_max" type="number" min="1" step="1" value="12"/></div>
+    <div class="kff"><label>Kundenpreis / TN <span class="ktag">€</span></label><input id="kk_price" type="number" min="0" step="1" value="1500"/></div>
+    <div class="kff"><label>Ziel-DB <span class="ktag">%</span></label><input id="kk_tdb" type="number" min="0" max="100" step="1" value="20"/></div>
+  </div>
+  <div class="kkcard">
+    <h3>Fixkosten</h3>
+    <div class="kff"><label>Trainer <span class="ktag">€/Tag</span></label><input id="kk_tpd" type="number" min="0" step="1" value="1000"/></div>
+    <div class="kkdiv">
+      <div class="kkdlabel">Sonstige Fixkosten</div>
+      <div id="kk_fixList"></div>
+      <button class="bnadd" onclick="kkAddRow('fix')">+ Kostenposition hinzufügen</button>
+    </div>
+  </div>
+  <div class="kkcard">
+    <h3>Variable Kosten / TN</h3>
+    <div class="kff"><label>Unterlagen <span class="ktag">€/TN</span></label><input id="kk_ul" type="number" min="0" step="1" value="0"/></div>
+    <div class="kff"><label>Labs <span class="ktag">€/TN</span></label><input id="kk_lab" type="number" min="0" step="1" value="70"/></div>
+    <div class="kff"><label>Verpflegung <span class="ktag">€/TN/Tag</span></label><input id="kk_food" type="number" min="0" step="1" value="16"/></div>
+    <div class="kkdiv">
+      <div class="kkdlabel">Sonstige variable Kosten</div>
+      <div id="kk_varList"></div>
+      <button class="bnadd" onclick="kkAddRow('var')">+ Kostenposition hinzufügen</button>
+    </div>
+  </div>
+</div>
+
+<div class="kksum">
+  <div class="kkmet"><div class="ml">Kundenpreis / TN</div><div class="mv" id="kk_mPrice">—</div><div class="mn">ohne Rabatt</div></div>
+  <div class="kkmet"><div class="ml">Fixkosten gesamt</div><div class="mv" id="kk_mFix">—</div><div class="mn">Trainer + sonstige Fix</div></div>
+  <div class="kkmet"><div class="ml">Variable Kosten / TN</div><div class="mv" id="kk_mVar">—</div><div class="mn">alle variablen Kosten</div></div>
+  <div class="kkmet hi"><div class="ml">Break-even (0% Rabatt)</div><div class="mv" id="kk_mBE">—</div><div class="mn" id="kk_mBEn">—</div></div>
+  <div class="kkmet"><div class="ml">Ziel-DB erreicht ab</div><div class="mv" id="kk_mTgt">—</div><div class="mn">bei 0% Rabatt</div></div>
+</div>
+
+<div class="kktbl">
+  <div class="kkth">
+    <h4 id="kk_title">Ergebnis</h4>
+    <div class="kkleg">
+      <span><i style="background:#fbd38d"></i> Break-even</span>
+      <span><i style="background:#c6f6d5"></i> Ziel-DB erreicht</span>
+      <span><i style="background:#fefcbf"></i> Positiv, unter Ziel</span>
+      <span><i style="background:#fed7d7"></i> Verlust</span>
+    </div>
+  </div>
+  <div class="kktw">
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">Status</th>
+          <th rowspan="2">TN</th>
+          <th rowspan="2">Fixkosten</th>
+          <th rowspan="2">Var. Kosten</th>
+          <th rowspan="2">Gesamt</th>
+          <th rowspan="2">Kosten/TN</th>
+          <th class="thg tds" colspan="2">0% Rabatt</th>
+          <th class="thg tds" colspan="2">5% Rabatt</th>
+          <th class="thg tds" colspan="2">10% Rabatt</th>
+        </tr>
+        <tr>
+          <th class="tds">DB gesamt</th><th>DB %</th>
+          <th class="tds">DB gesamt</th><th>DB %</th>
+          <th class="tds">DB gesamt</th><th>DB %</th>
+        </tr>
+      </thead>
+      <tbody id="kk_body"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="kkfoot"><strong>Kostenlogik:</strong> Trainerkosten + sonstige Fixkosten sind unabhängig von der TN-Zahl · Unterlagen, Labs, Verpflegung + sonstige variable Kosten skalieren pro TN · Break-even-Zeile ist orange hervorgehoben</div>
+
+<script>
+(function(){
+  var eur=function(v){return new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(v)};
+  var pct=function(v){return (v*100).toFixed(0)+'%'};
+  var num=function(id){return Number(document.getElementById(id).value||0)};
+  var fixRows=[],varRows=[],rid=0;
+
+  window.kkAddRow=function(type){
+    var id=++rid;
+    (type==='fix'?fixRows:varRows).push({id:id,label:'',amount:0});
+    kkRenderRows(type); kkCalc();
+  };
+  window.kkDelRow=function(type,id){
+    if(type==='fix') fixRows=fixRows.filter(function(r){return r.id!==id});
+    else varRows=varRows.filter(function(r){return r.id!==id});
+    kkRenderRows(type); kkCalc();
+  };
+  window.kkUpdateRow=function(type,id,field,val){
+    var arr=type==='fix'?fixRows:varRows;
+    var r=arr.find(function(r){return r.id===id});
+    if(r) r[field]=field==='amount'?Number(val||0):val;
+    kkCalc();
+  };
+
+  function kkRenderRows(type){
+    var arr=type==='fix'?fixRows:varRows;
+    var el=document.getElementById(type==='fix'?'kk_fixList':'kk_varList');
+    el.innerHTML='';
+    arr.forEach(function(r){
+      var tag=type==='fix'?'€ fix':'€/TN';
+      var d=document.createElement('div');
+      d.className='kksr';
+      d.innerHTML='<input type="text" placeholder="Bezeichnung" value="'+r.label+'" oninput="kkUpdateRow(\''+type+'\','+r.id+',\'label\',this.value)"/>'
+        +'<input type="number" min="0" step="1" value="'+r.amount+'" oninput="kkUpdateRow(\''+type+'\','+r.id+',\'amount\',this.value)"/>'
+        +'<span class="kktag2">'+tag+'</span>'
+        +'<button class="bndel" onclick="kkDelRow(\''+type+'\','+r.id+')">×</button>';
+      el.appendChild(d);
+    });
+  }
+
+  function kkCalc(){
+    var dur=num('kk_dur'),price=num('kk_price'),target=num('kk_tdb')/100;
+    var tpd=num('kk_tpd'),ul=num('kk_ul'),lab=num('kk_lab'),food=num('kk_food');
+    var minTn=Math.max(1,Math.floor(num('kk_min'))),maxTn=Math.max(minTn,Math.floor(num('kk_max')));
+    var xFix=fixRows.reduce(function(s,r){return s+r.amount},0);
+    var xVar=varRows.reduce(function(s,r){return s+r.amount},0);
+    var fixTot=dur*tpd+xFix,varTn=ul+lab+(food*dur)+xVar;
+
+    document.getElementById('kk_title').textContent='Ergebnis: '+(document.getElementById('kk_name').value||'Kurs');
+    document.getElementById('kk_mPrice').textContent=eur(price);
+    document.getElementById('kk_mFix').textContent=eur(fixTot);
+    document.getElementById('kk_mVar').textContent=eur(varTn);
+
+    var rows=[],beFound=null,tgtFound=null;
+    for(var tn=minTn;tn<=maxTn;tn++){
+      var varTot=tn*varTn,tot=fixTot+varTot,ctn=tot/tn;
+      var dbs=[0,0.05,0.10].map(function(d){
+        var rev=tn*price*(1-d),db=rev-tot,dp=rev===0?0:db/rev;
+        return {db:db,dp:dp};
+      });
+      if(beFound===null&&dbs[0].db>=0) beFound=tn;
+      if(tgtFound===null&&dbs[0].db>=0&&dbs[0].dp>=target) tgtFound=tn;
+      rows.push({tn:tn,fixTot:fixTot,varTot:varTot,tot:tot,ctn:ctn,dbs:dbs});
+    }
+
+    document.getElementById('kk_mBE').textContent=beFound?beFound+' TN':'nicht erreicht';
+    document.getElementById('kk_mBEn').textContent=beFound?'DB: '+eur(rows.find(function(r){return r.tn===beFound}).dbs[0].db):'im gewählten TN-Bereich';
+    document.getElementById('kk_mTgt').textContent=tgtFound?tgtFound+' TN':'nicht erreicht';
+
+    var body=document.getElementById('kk_body');
+    body.innerHTML='';
+    rows.forEach(function(r){
+      var d0=r.dbs[0],isBE=(r.tn===beFound);
+      var rc,pc,pl;
+      if(d0.db<0){rc='rb';pc='pb';pl='Verlust';}
+      else if(isBE){rc='rbe';pc='pbe';pl=d0.dp>=target?'Break-even ✓':'Break-even';}
+      else if(d0.dp<target){rc='rw';pc='pw';pl='Kritisch';}
+      else{rc='rg';pc='pg';pl='Gut';}
+
+      var dcs=r.dbs.map(function(d){
+        var c=d.db<0?'neg':'pos';
+        return '<td class="tds '+c+'"><strong>'+eur(d.db)+'</strong></td><td class="'+c+'">'+pct(d.dp)+'</td>';
+      }).join('');
+
+      body.innerHTML+='<tr class="'+rc+'"><td><span class="pill '+pc+'">'+pl+'</span></td>'
+        +'<td><strong>'+r.tn+'</strong></td><td>'+eur(r.fixTot)+'</td><td>'+eur(r.varTot)+'</td>'
+        +'<td><strong>'+eur(r.tot)+'</strong></td><td>'+eur(r.ctn)+'</td>'+dcs+'</tr>';
+    });
+  }
+
+  ['kk_name','kk_dur','kk_price','kk_tdb','kk_tpd','kk_ul','kk_lab','kk_food','kk_min','kk_max']
+    .forEach(function(id){document.getElementById(id).addEventListener('input',kkCalc)});
+  kkCalc();
+})();
+</script>
+</div>
